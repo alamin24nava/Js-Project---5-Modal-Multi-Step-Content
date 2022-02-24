@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        
+/* sign up sign in page modal added css */
+.datprep_modal .container{
+    max-width: 1092px;
+}
+.datprep_modal .modal-header{
+    justify-content: flex-end;
+}
+.datprep_modal .modal-content {
+    max-width: 802px;
+    margin: 0 auto;
+    /* height: 590px; */
+    background: #ffffff;
+    box-shadow: 5px 10px 50px rgba(0, 0, 0, 0.05);
+    padding: 36px 36px 55px 36px;
+}
+.datprep_modal .modal {
+    background: rgba(171, 172, 173, 0.5);
+    backdrop-filter: blur(2px);
+}
+.datprep_modal .modal-header .btn-close{
+     opacity: 0.4;
+}
+.datprep_modal .modal-header .btn-close:hover{
+     opacity: 0.5;
+}
+.datprep_modal .modal-body {
+    padding: 0;
+}
+.datprep_modal .modal-body img {
+    /* padding-bottom: 42px; */
+    /* padding-top: 140px; */
+    padding-bottom: 17px;
+}
+.datprep_modal .modal-body h3 {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 38px;
+    text-align: center;
+    color: #323232;
+    padding-bottom: 18px;
+}
+.datprep_modal .modal-body p {
+    font-family: 'Nunito' ,Sans;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #525C73;
+    max-width: 570px;
+    margin: 0 auto;
+    padding-bottom: 24px;
+}
+.modal-dialog-scrollable .modal-body {
+    overflow-y: inherit;
+}
+.datprep_modal .modal-dialog {
+    max-width: 100% !important;
+}
+.modal-footer {
+    padding: 0;
+    display: block;
+    border-top: 0;
+}
+.modal-log {
+    text-align: left!important;
+    position: fixed;
+}
+.modal-logo{
+    text-align: left;
+}
+.modal-footer a,
+.footer-modal-skip a{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #FF5B5B;
+    padding: 9px 23px;
+    border:1px solid var(--theme-second-color);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.footer-modal-skip a:hover{
+   background-color: var(--btn-bg);
+   color: var(--light-color);
+}
+.rectangle{
+    width: 40px;
+    height: 3px;
+    background: #CFD6E3;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+.modal-label-view label{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: block;
+    text-align: left;
+    padding-bottom: 10px;
+}
+/* sign-input-modal */
+.sign-input-modal {
+    height: 778px;
+}
+.sign-input-modal .select{
+    width:100%;
+}
+.sign-input-modal .custom-select {
+    border-left: 1px solid #D1D3D6;
+    text-align: left;
+    border-radius: 5px;
+}
+.sign-input-modal .select-options{
+    border-radius: 0 !important;
+}
+.sign-input-modal .select-options li{
+    border: 1px solid #D1D3D6 !important;
+    border-top: 0 !important;
+    text-align: left;
+}
+.sing-up-form-inner-popup{
+    width: 384px;
+    margin: 0 auto;
+}
+.modal-body h3.pt50{
+    padding-bottom: 24px !important;
+}
+.modal-body p.pb-4{
+    padding-bottom: 32px !important;
+}
+@media(max-width:767px){
+    .datprep_modal  .modal-body h3 {
+        font-size: 36px;
+    }
+    .datprep_modal  .modal-body p {
+        font-size: 18px;
+    }
+    .modal-footer a{
+        font-size: 16px;
+    }
+    .datprep_modal .modal-body img {
+        padding-top: 70px;
+    }
+}
+@media(max-width:575px){
+    .datprep_modal .modal-body h3 {
+        font-size:28px;
+        line-height: 35px;
+        padding-bottom: 15px;
+    }
+    .modal-footer-nav{
+        padding-bottom: 30px;
+    }
+    .modal-footer {
+        padding: 40px 0;
+    }
+    .nav-link{
+        padding: 8px;
+    }
+    .datprep_modal .modal-body {
+        padding: 0 15px;
+    }
+}
+    </style>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
+        <section class="datprep_modal ">
+            <div class="container">
+                <!-- Button trigger modal -->
+                <button type="button" class="clickBTN btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    click here
+                </button>
+    
+                <!-- Modal -->
+                <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static"
+                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content sign-input-modal">
+                            <div class="modal-body text-center">
+                                <div class="modal-logo">
+                                    <img src="assets/img/logo.png" alt="">
+                                </div>
+                                <div class="modal-content-inner inner-item-7">
+                                    <img src="assets/img/modal-1.png" class="img-fluid" alt="">
+                                    <h3>Hey there!
+                                       <span class="d-block">Start sharing your video now!</span> </h3>
+                                    <p>Head to the recording page and choose your settings. Turn noise cancelation on/off, check your video quality, etc</p>
+                                </div>
+                                <div class="modal-content-inner inner-item-2">
+                                    <img src="assets/img/modal-2.png" class="img-fluid" alt="">
+                                    <h3>Hey there!
+                                       <span class="d-block">Start sharing your video now!</span> </h3>
+                                    <p>Head to the recording page and choose your settings. Turn noise cancelation on/off, check your video quality, etc</p>
+                                </div>
+                                <div class="modal-content-inner inner-item-3">
+                                    <img src="assets/img/modal-3.png" class="img-fluid" alt="">
+                                    <h3>Hey there!
+                                       <span class="d-block">Start sharing your video now!</span> </h3>
+                                    <p>Head to the recording page and choose your settings. Turn noise cancelation on/off, check your video quality, etc</p>
+                                </div>
+                                <div class="modal-content-inner inner-item-4">
+                                    <img src="assets/img/modal-4.png" class="img-fluid" alt="">
+                                    <h3>Hey there!
+                                       <span class="d-block">Start sharing your video now!</span> </h3>
+                                    <p>Head to the recording page and choose your settings. Turn noise cancelation on/off, check your video quality, etc</p>
+                                </div>
+                                <div class="modal-content-inner inner-item-5">
+                                    <img src="assets/img/modal-5.png" class="img-fluid" alt="">
+                                    <h3>Hey there!
+                                       <span class="d-block">Start sharing your video now!</span> </h3>
+                                    <p>Head to the recording page and choose your settings. Turn noise cancelation on/off, check your video quality, etc</p>
+                                </div>
+                                <div class="modal-content-inner inner-item-6">
+                                    <h3 class="pt50">Let start with some basics</h3>
+                                    <p class="pb-4">Head to the recording page and choose your settings. Turn noise cancelation on/off, check your video quality, etc</p>
+                                    <div class="sing-up-form-inner sing-up-form-inner-popup">
+                                        <form class="row g-3">
+                                            <div class="col-md-12 modal-label-view">
+                                                <label for="company-name">Company Name</label>
+                                              <input type="text" class="form-control" id="company-name" placeholder="Polyuno">
+                                            </div>
+                                            <div class="col-md-12 modal-label-view">
+                                                <label for="company-size">Company Size</label>
+                                                <div class="wrap">
+                                                    <select id="selectInput" class="custom-selector-input">
+                                                      <option>1-10</option>
+                                                      <option>10-15</option>
+                                                      <option active>15-20</option>
+                                                      <option>20-25</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 modal-label-view">
+                                                <label for="company-size">Role</label>
+                                                <div class="wrap">
+                                                    <select id="selectInput" class="custom-selector-input">
+                                                      <option>Manager</option>
+                                                      <option>CEO</option>
+                                                      <option active>Founder</option>
+                                                      <option>Employee</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="modal-content-inner inner-item-1">
+                                    <h3 class="pt50">Invite Team members</h3>
+                                    <p class="pb-4">Head to the recording page and choose your settings. Turn noise cancelation on/off, check your video quality, etc</p>
+                                    <div class="sing-up-form-inner sing-up-form-inner-popup">
+                                        <form class="row g-3">
+                                            <div class="col-md-12 modal-label-view">
+                                                <label for="company-name">Company Name</label>
+                                              <input type="text" class="form-control" id="company-name" placeholder="Enter Teammates's Email">
+                                            </div>
+                                            <div class="col-md-12 modal-label-view">
+                                                <label for="company-size">Team member Role</label>
+                                                <div class="wrap">
+                                                    <select id="selectInput" class="custom-selector-input">
+                                                      <option>Editor</option>
+                                                      <option>Admin</option>
+                                                      <option active>Founder</option>
+                                                      <option>Employee</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="row">
+                                    <div class="col-sm-11 col-xs-12 d-flex align-items-center justify-content-center">
+                                        <div class="modal-footer-nav">
+                                          <div class="footer-modal-skip">
+                                            <a href="#" data-val="1" class="backBTN nxt-btn">Back</a>
+                                            <a href="#" data-val="2" class="nextBTN nxt-btn">Next</a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script>
+        // login modal open
+
+        var activeSlide = 1; var totalSlides = 5;
+        $('.inner-item-2, .inner-item-3, .inner-item-4, .inner-item-5, .inner-item-6, .inner-item-7').hide();
+        $('.backBTN').click(function (e) { e.preventDefault();
+            if(activeSlide != 1){
+                activeSlide = activeSlide-1;
+                $('.inner-item-1, .inner-item-2, .inner-item-3, .inner-item-4, .inner-item-5, .inner-item-6, .inner-item-7').hide(); $('.inner-item-'+activeSlide).fadeIn(1000);
+            }
+        });
+        
+        $('.nextBTN').click(function (e) { e.preventDefault();
+            if(activeSlide != 7){
+                activeSlide = activeSlide+1;
+                $('.inner-item-1, .inner-item-2, .inner-item-3, .inner-item-4, .inner-item-5, .inner-item-6, .inner-item-7').hide(); $('.inner-item-'+activeSlide).fadeIn(1000);
+            }
+        });
+    </script>
+  </body>
+</html>
